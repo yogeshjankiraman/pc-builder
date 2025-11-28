@@ -22,8 +22,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 CMD ["sh", "-c", "java $JAVA_OPTS -Dserver.port=${PORT} -jar /app/app.jar"]
-FROM eclipse-temurin:17-jdk-jammy
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]
+
