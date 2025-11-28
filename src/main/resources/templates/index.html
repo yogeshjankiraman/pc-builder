@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PC Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="dark">
+  <header class="topbar">
+    <div class="brand">PC Builder</div>
+    <div class="subtitle">Quickly assemble a PC — drag parts into your build</div>
+  </header>
+
+  <main class="layout">
+    <aside class="parts" id="parts">
+      <!-- parts loaded here -->
+    </aside>
+
+    <section class="build-panel">
+      <div class="build" id="build">
+        <h3>Your Build</h3>
+        <div class="build-instructions">Drag parts here or click a part to add.</div>
+        <div id="buildList" class="build-list"></div>
+        <div class="actions">
+          <button id="calcBtn" class="btn primary">Calculate Total</button>
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+        <div id="total" class="total">Total: ₹ 0</div>
+      </div>
+      <div class="info">Tip: Add CPU, GPU, RAM and storage to get an estimate. Use the Calculate button to compute final total.</div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

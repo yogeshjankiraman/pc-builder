@@ -1,0 +1,40 @@
+:root{
+	--bg:#0f1720;
+	--panel:#0b1220;
+	--muted:#9aa4b2;
+	--accent:#f6a623;
+	--card:#0f1a2a;
+	--glass: rgba(255,255,255,0.04);
+}
+body.dark{
+	font-family: Inter,Segoe UI,Arial,sans-serif; margin:0; background:linear-gradient(180deg,#071021 0%, #051725 100%); color:#e6eef6;
+}
+.topbar{display:flex;align-items:center;gap:20px;padding:18px 28px;border-bottom:1px solid rgba(255,255,255,0.03);}
+.brand{font-weight:700;font-size:1.2rem;color:var(--accent)}
+.subtitle{color:var(--muted);font-size:0.95rem}
+.layout{display:flex;gap:20px;padding:24px}
+.parts{width:48%;max-height:72vh;overflow:auto;padding:12px;background:var(--panel);border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.category{margin-bottom:12px}
+.category h3{margin:0 0 8px 8px;color:var(--muted);font-size:0.95rem}
+.part{display:flex;justify-content:space-between;align-items:center;padding:12px;margin:8px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);transition:transform .15s,box-shadow .15s}
+.part:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.part .meta{display:flex;flex-direction:column}
+.part .name{font-weight:600}
+.part .price{color:var(--accent);font-weight:700}
+.part .small{color:var(--muted);font-size:0.9rem}
+.build-panel{width:52%;display:flex;flex-direction:column;gap:12px}
+.build{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);min-height:200px}
+.build h3{margin:0 0 8px 0}
+.build-instructions{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+.build-list{min-height:120px}
+.build-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:var(--glass);margin-bottom:8px}
+.btn{padding:8px 12px;border-radius:8px;border:none;background:transparent;color:var(--muted);cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#ffb85a);color:#07101a;font-weight:700}
+.btn.add{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);padding:6px 10px;border-radius:8px;font-weight:700}
+.btn.add:hover{background:rgba(255,255,255,0.02)}
+.actions{display:flex;gap:8px;margin-top:10px}
+.total{margin-top:12px;font-size:1.1rem;font-weight:700;color:var(--accent)}
+.info{color:var(--muted);font-size:0.9rem}
+
+/* responsive */
+@media (max-width:900px){.layout{flex-direction:column}.parts,.build-panel{width:100%}}
