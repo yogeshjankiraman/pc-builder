@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pc-builder
+    env: docker
+    branch: main
+    region: oregon
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    healthCheckPath: /healthz
+    autoDeploy: true
